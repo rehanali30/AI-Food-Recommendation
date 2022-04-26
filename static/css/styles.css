@@ -1,0 +1,29 @@
+body{
+    background-color: #c1e3ffbf;
+}
+
+.container{
+    width:22rem;
+}
+
+.video-container{
+    position: relative;
+}
+
+#canvas{
+    padding: 0 1rem;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+    width: 26rem;
+    height: 18rem;
+    z-index: 2;
+}
+
+#video{
+    padding: 0 1rem;
+    position: absolute;
+    width: 26rem;
+    height: 18rem;
+    z-index: 1;
+}
