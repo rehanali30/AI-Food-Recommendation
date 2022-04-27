@@ -1,5 +1,7 @@
 import base64
 import numpy as np
+from PIL import Image
+import io
 
 from fer import FER
 import cv2
@@ -10,6 +12,12 @@ def get_emotion(img_base64):
     img = cv2.imdecode(img_jpg, cv2.IMREAD_COLOR)
     
     detector = FER()
-    emotion, score = detector.top_emotion(img)
+    try:
+        emotion, score = detector.top_emotion(img)
+        result = "You seem to be " + emotion
+    except:
+        result = "The image was unclear\nPlease try again.."
+    
     print(score)
-    return emotion
+    return emotion, result, img_base64
+

@@ -1,0 +1,37 @@
+﻿id,emotion,food
+1,happy,salmon
+2,happy,mushrooms
+3,happy,grapes
+4,happy,quinoa
+1,sad,chocolate
+2,sad,berries
+3,sad,pasta
+4,sad,cake
+1,fear,popcorn
+2,fear,ginger tea
+3,fear,pineapple
+4,fear,egg
+1,angry,bananas
+2,angry,oats
+3,angry,beans 
+4,angry,fish
+1,neutral,pizza
+2,neutral,burger
+3,neutral,tacos
+4,neutral,sandwiches
+1,disgust,watermelon jucie
+2,disgust,custard
+3,disgust,soup
+4,disgust,dark chocolate
+1,surprise,smoothies
+2,surprise,yogurt
+3,surprise,muffins
+4,surprise,bagels
+2,happy,salmon
+3,sad,cake
+4,fear,popcorn
+1,angry,fish
+3,neutral,burger
+4,disgust,watermelon jucie
+2,surprise,smoothies
+4,sad,berries

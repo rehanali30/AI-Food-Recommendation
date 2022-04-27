@@ -1,9 +1,10 @@
+from recommendation import menu
 from emotion import get_emotion
-from forms import LoginForm, SignupForm
 
 from flask import Flask, request, make_response, render_template, redirect, flash, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from forms import LoginForm, SignupForm
 
 from flask_login import UserMixin, LoginManager, login_user, login_required, logout_user, current_user
 
@@ -52,7 +53,7 @@ def login():
 def logout():
 	logout_user()
 	flash("You Have Been Logged Out!")
-	return redirect(url_for('/'))
+	return redirect('/')
 
 
 
@@ -77,10 +78,30 @@ def signup():
 @login_required
 def capture_img():
     if request.method == "POST":
-        msg = get_emotion(request.form["img"])
-        return make_response(msg)
-    else:
-        return render_template('emotion.html')
+        global emotion, msg, img
+        emotion, msg, img = get_emotion(request.form["img"])
+        return redirect('/recommend')
+    
+    return render_template('emotion.html')
+
+@app.route('/recommend', methods=['GET'])
+@login_required
+def recommend():
+    if emotion=='angry':
+        food = 'Chocolate'
+    elif emotion=='disgust':
+        food = 'Watermelon Juice'
+    elif emotion=='fear':
+        food = 'Smoothies'
+    elif emotion=='happy':
+        food = 'Pizza'
+    elif emotion=='neutral':
+        food = 'Popcorn'
+    elif emotion=='sad':
+        food = 'Cake'
+    elif emotion=='surprise':
+        food = 'Pasta'
+    return render_template('recommend.html', msg=msg, img=img, menu=menu, food=food)
 
 
 if __name__ == '__main__':

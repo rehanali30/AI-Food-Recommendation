@@ -28,13 +28,12 @@ var xhr = new XMLHttpRequest();
 
 //Captured image data(base64) POST
 function captureImg(img_base64) {
+
 	const body = new FormData();
 	body.append('img', img_base64);
 	xhr.open('POST', 'http://localhost:8000/emotion', true);
-	xhr.onload = () => {
-		emotion = xhr.responseText
-		console.log(emotion)
-		result.innerText = "You seem to be " + emotion
-	};
 	xhr.send(body);
+	xhr.onload = () => {
+		window.location.href = "/recommend";
+	};
 }
