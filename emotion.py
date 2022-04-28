@@ -1,7 +1,5 @@
 import base64
 import numpy as np
-from PIL import Image
-import io
 
 from fer import FER
 import cv2

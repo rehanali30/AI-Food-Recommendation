@@ -1,4 +1,4 @@
-from recommendation import menu
+from recommendation import menu, recommender
 from emotion import get_emotion
 
 from flask import Flask, request, make_response, render_template, redirect, flash, url_for
@@ -87,20 +87,7 @@ def capture_img():
 @app.route('/recommend', methods=['GET'])
 @login_required
 def recommend():
-    if emotion=='angry':
-        food = 'Chocolate'
-    elif emotion=='disgust':
-        food = 'Watermelon Juice'
-    elif emotion=='fear':
-        food = 'Smoothies'
-    elif emotion=='happy':
-        food = 'Pizza'
-    elif emotion=='neutral':
-        food = 'Popcorn'
-    elif emotion=='sad':
-        food = 'Cake'
-    elif emotion=='surprise':
-        food = 'Pasta'
+    food = recommender(emotion)
     return render_template('recommend.html', msg=msg, img=img, menu=menu, food=food)
 
 
