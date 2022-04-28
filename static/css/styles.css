@@ -2,10 +2,25 @@ body{
     background-color: #c1e3ffbf;
 }
 
+.container{
+    padding: 2rem;
+    width: 100%;
+}
+
+.forms{
+    max-width: 22em;
+    width: 90%;
+}
+
+.card{
+    max-width: 26em;
+    width: 90%;
+}
 
 .video-container{
     position: relative;
     text-align: center;
+    width: 100%;
 }
 
 #canvas{
@@ -13,15 +28,15 @@ body{
     position: relative;
     opacity: 0;
     visibility: hidden;
-    width: 26rem;
-    height: 18rem;
+    width: 25em;
+    height: 18em;
     z-index: 2;
 }
 
 #video{
     padding: 0 1rem;
     position: absolute;
-    width: 26rem;
-    height: 18rem;
+    width: 25em;
+    height: 18em;
     z-index: 1;
 }

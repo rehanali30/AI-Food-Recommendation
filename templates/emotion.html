@@ -36,17 +36,18 @@
 	</div>
 	
     {% endfor %}
-
-    <div class="card my-5 mx-auto justify-content-center" style="width: 26rem;">
-        <div class="card-img-top my-3 px-auto justify-content-center video-container">
-            <video id="video" autoplay></video>
-            <canvas id="canvas"></canvas>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Capture Emotion</h5>
-            <p id="result" class="card-text">Let's see how you're feeling today!</p>
-            <button id="start-camera" class="btn btn-primary">Start Camera</button>
-            <button id="click-photo" class="btn btn-primary" href="/recommend">Click Photo</button>
+    <div class="container">
+        <div class="card my-5 mx-auto justify-content-center">
+            <div class="card-img-top my-3 px-auto justify-content-center video-container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Capture Emotion</h5>
+                <p id="result" class="card-text">Let's see how you're feeling today!</p>
+                <button id="start-camera" class="btn btn-primary">Start Camera</button>
+                <button id="click-photo" class="btn btn-primary" href="/recommend">Click Photo</button>
+            </div>
         </div>
     </div>
 

@@ -38,10 +38,10 @@
 	
     {% endfor %}
 
-    <div class="container my-3" style="width:22rem;">
+    <div class="container my-3">
         <h1 class="title row justify-content-center my-3">Login</h1>
         <br>
-        <form class="justify-content-center my-3" method="POST">
+        <form class="my-3 mx-auto forms" method="POST">
             {{ form.hidden_tag() }}
 
             {{ form.email.label(class="form-label") }}
@@ -50,7 +50,7 @@
             {{ form.login(class="btn btn-info") }}
         </form>
 		<br/>
-        <p>Don't have an account? <a href="signup">Create a new account!</a></p>
+        <p style="text-align:center;">Don't have an account? <a href="signup">Create a new account!</a></p>
     </div>
 </body>
 
